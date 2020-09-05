@@ -1,0 +1,154 @@
+h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.robots {
+}
+
+.head,
+.left_arm,
+.torso,
+.right_arm,
+.left_leg,
+.right_leg {
+  background-color: #5f93e8;
+}
+
+.head {
+  width: 200px;
+  margin: 0 auto;
+  height: 150px;
+  border-radius: 200px 200px 0 0;
+  margin-bottom: 10px;
+}
+
+.eyes {
+  display: flex;
+}
+
+.head:hover {
+  transform: rotate3d(1, 5, 1, 33deg);
+  transition: 1s ease-in-out;
+}
+
+.upper_body {
+  display: flex;
+  justify-content: center;
+}
+
+.left_arm,
+.right_arm {
+  width: 40px;
+  height: 125px;
+  border-radius: 100px;
+}
+
+.left_arm {
+  margin-right: 10px;
+}
+
+.right_arm {
+  margin-left: 10px;
+}
+
+.right_arm:hover {
+  transform-origin: 50% 15%;
+  animation: wave-right-animation 1.5s 0s ease-in-out infinite;
+}
+
+@keyframes wave-right-animation {
+  0% {
+    transform: rotate(-135deg);
+  }
+  10% {
+    transform: rotate(-145deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-135deg);
+  }
+  30% {
+    transform: rotate(-145deg);
+  }
+  40% {
+    transform: rotate(-135deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  50% {
+    transform: rotate(-145deg);
+  }
+  60% {
+    transform: rotate(-135deg);
+  }
+  100% {
+    transform: rotate(-145deg);
+  }
+}
+
+.torso {
+  width: 200px;
+  height: 200px;
+  border-radius: 0 0 50px 50px;
+}
+
+.torso:active {
+  transform: scale(1.05);
+}
+
+.lower_body {
+  width: 200px;
+  height: 200px;
+  /* This is another useful property. Hmm what do you think it does?*/
+  margin: 0 auto;
+}
+
+.left_leg,
+.right_leg {
+  width: 40px;
+  height: 120px;
+  border-radius: 0 0 100px 100px;
+}
+
+.left_leg {
+  position: relative;
+  left: 45px;
+  bottom: 10px;
+}
+
+.left_leg:hover {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.right_leg {
+  position: relative;
+  left: 120px;
+  bottom: 130px;
+}
+
+.left_eye,
+.right_eye {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.left_eye {
+  position: relative;
+  top: 100px;
+  left: 40px;
+}
+
+.left_eye:active,
+.right_eye:active {
+  background-color: blue;
+}
+
+.right_eye {
+  position: relative;
+  top: 100px;
+  left: 120px;
+}
